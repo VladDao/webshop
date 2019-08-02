@@ -1,0 +1,50 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.plietnov.webshop.servlet.DefaultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/shop</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>shop</welcome-file>
+    </welcome-file-list>
+    <context-param>
+        <param-name>captcha-strategy</param-name>
+        <!--        <param-value>session</param-value>-->
+        <param-value>context</param-value>
+    </context-param>
+
+    <!--    <servlet-mapping>-->
+    <!--        <servlet-name>HelloServlet</servlet-name>-->
+    <!--        <url-pattern>/servlet</url-pattern>-->
+    <!--    </servlet-mapping>-->
+    <jsp-config>
+        <taglib>
+            <taglib-uri>language</taglib-uri>
+            <taglib-location>tags/language.tld</taglib-location>
+        </taglib><taglib>
+            <taglib-uri>custom</taglib-uri>
+            <taglib-location>tags/custom.tld</taglib-location>
+        </taglib>
+        <taglib>
+            <taglib-uri>avatar</taglib-uri>
+            <taglib-location>tags/avatar.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+    <resource-ref>
+        <description>postgreSQL DataSource</description>
+        <res-ref-name>jdbc/postgres</res-ref-name>
+        <res-type>javax.sql.DataSource</res-type>
+        <res-auth>Container</res-auth>
+    </resource-ref>
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+</web-app>

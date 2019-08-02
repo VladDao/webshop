@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<security>
+    <constraint>
+        <url-pattern>/ /login /ShowProduct /Registration</url-pattern>
+        <role>unregistered user</role >
+    </constraint>
+    <constraint>
+        <url-pattern>/ /ShowProduct /Registration /makeOrder /logout /showBasket /addProduct</url-pattern>
+        <role>registered user</role >
+    </constraint>
+</security>

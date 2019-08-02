@@ -1,0 +1,12 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>web-store-tag</short-name>
+    <uri>/WEB-INF/language.tld</uri>
+
+    <tag>
+        <name>language</name>
+        <tag-class>com.plietnov.webshop.tag.LanguageTag</tag-class>
+        <body-content>empty</body-content>
+    </tag>
+</taglib>

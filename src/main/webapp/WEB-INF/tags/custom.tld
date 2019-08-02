@@ -1,0 +1,11 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>Captcha tag</short-name>
+    <uri>custom</uri>
+    
+    <tag-file>
+        <name>Captcha</name>
+        <path>/WEB-INF/tags/captcha.tag</path>
+    </tag-file>
+</taglib>
